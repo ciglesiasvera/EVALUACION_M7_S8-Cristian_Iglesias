@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fábricas y Productos</title>
+</head>
+<body>
+    <h1>Fábricas</h1>
+    <ul>
+        {% for fabrica in fabricas %}
+            <li>{{ fabrica.id }} {{ fabrica.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Productos</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.id }} {{ producto.nombre }} es fabricado por {{ producto.fabrica_nombre }}.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
